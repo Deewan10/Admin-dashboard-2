@@ -70,3 +70,8 @@ body {
     pointer-events: none; 
 }
 
+.nav ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none; 
+}
+
