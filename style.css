@@ -42,6 +42,8 @@ body {
    position: relative; 
    width: 100%;
    list-style: none;
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
 }
 
 .nav ul li a {
@@ -57,7 +59,7 @@ body {
     display: block;
     min-width: 60px;
     height: 60px;
-    line-height: 60px;
+    line-height: 70px;
     text-align: center;
 }
 
@@ -65,13 +67,25 @@ body {
     background-color: var(--white);
 }
 
+.nav ul li:hover a{
+    color: var(--blue);
+}
 .nav ul li:nth-child(1) {
     margin-bottom: 40px;
     pointer-events: none; 
 }
 
-.nav ul li:nth-child(1) {
-    margin-bottom: 40px;
-    pointer-events: none; 
+.nav ul li a .icon i  {
+   font-size: 1.65rem;
+   padding-top: 10px;
+}
+
+.nav ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
 }
 
