@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+
+.list li::after {
+  content: ".............................";
+  padding-left: 20px;
+  color: rgba(0, 0, 0, 0.064);
+  position: absolute;
+  align-items: center;
+  top: -30%;
+}
+
+
+
+
+
+
+
+    .barchart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        flex-wrap: wrap;
+        background: #F5F5FC;
+        padding:0 10px;
+    }
+
+    .contain {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;    
+    }
+    .num {
+        padding-left: 0px;
+    }
+    .num li{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding:15px 0px;
+        color: rgba(0, 0, 0, 0.329);
+    }
+
+    
+
+    .num2 {
+        list-style: none;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding:0px 0px 0px 0px;
+        color: rgba(0, 0, 0, 0.329);
+        margin-left: 36px;
+        margin-top: -30px;
+    }
+
+    .num2 li {
+        z-index: 5;
+    }
+    .stat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: -20px;
+    }
+    .stat h4 {
+        font-size: large;
+    }
+    #year {
+        padding: 2px 8px;
+        border: 1px solid #3326AE;
+        border-radius: 10px;
+        color: #3326AE;
+        background-color: white;
+        font-weight: 600;
+        outline: none;
+    }
+
+    .line-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .line {
+        width: 7px;
+        background-color: #3326AE;
+        border-radius: 10px;
+    }
+    .one {
+        height: 80px;
+        margin-top: 10px;
+    }
+
+    .two {
+        height: 70px;
+        margin-top: 30px;
+    }
+
+    .three {
+        margin-top: -30px;
+    }
+
+    .four {
+        height: 40px;
+        margin-top: -50px;
+    }
+    .five {
+        background-color: red;
+        height: 90px;
+        margin-top: -60px;
+    }
+    .five1 {
+        background-color: rgb(255, 255, 255);
+        padding: 15px 15px 20px ;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-top: 10px;
+        z-index: 22;
+    }
+    
+    .contain .fivee {
+        background-color: rgba(255, 0, 0, 0.171);
+    }
+
+    .thin-line {
+        width: 1px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.297); 
+    }
+    
+    .six {
+        height: 45px;
+    }
+
+    .seven {
+        margin-top: -30px;
+    }
+
+    .eight {
+        height: 40px;
+        margin-top: -50px;
+    }
+
+    .nine {
+        height: 45px;
+    }
+    .contain .ninee,
+    .contain .elevene {
+        height: 0px;
+    }
+
+    .ten {
+        height: 70px;
+        margin-top: -20px;
+    }
+
+    .eleven {
+        height: 55px;
+        margin-top: -70px;
+    }
+
+    .twelve {
+        height: 45px;   
+    }
+
+    .thirteen {
+        height: 70px;
+        margin-top: -40px;
+    }
+
+    .fourteen {
+        height: 50px;
+        margin-top: 35px;
+    }
+
+    .fifteen {
+        height: 45px;
+        margin-top: -60px;
+    }
+
+    .seventeen {
+        height: 80px;
+        margin-top: -40px;
+    }
+
+    .eighteen {
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .nineteen {
+        height: 50px;
+        margin-top: -60px;
+    }
+    
+    .cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 70%;
+    }
+    .card1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 180px;
+        height: 70px;
+        box-shadow: 1px 1px 1px 3px rgb(243, 238, 238);
+        border-radius: 20px;
+        padding:5px 10px;
+        background-color: white;
+        margin-top: 20px;
+    }
+
+    .card1:nth-child(3) {
+        background-color: red;
+    }
+    .card1:nth-child(3) h3 {
+        padding-right: 20px;
+    }
+    .card1 .pic {
+        height: 50px;
+        width: 50px;
+    }
+    .card1 img {
+        width: 100%;
+        height: 100%;
+        padding-right: 20px;
+    }
+    .card1 h5 {
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.363);
+        font-size: 0.6rem;
+        padding-right: 20px;
+    }
+    .red h5,
+    .red h3 {
+        color: white;
+    }
+    /* .red  {
+        background-color: white;
+        
+    } */
+    .card1 h3 {
+        margin-top: -15px;  
+        font-size: 20px;
+    }
+   
+    .card1 .txt1 {
+        padding-right: 20px;
+    }
+    .cont {
+        width: 35%;
+        height: 300px;
+        padding:0px 20px;
+    }
+    .cont-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: px;
+    }
+    .text p{
+        margin-top: -20px;
+    }
+    .cont-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  
+    }
+
+    button {
+        color: white;
+        background-color: #3326AE;
+        border-radius: 20px;
+        padding: 10px 15px;
+        border: none;
+    }
+
+
+
+
+
+    .container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid white;
+        color: #3326AE;
+        font-weight: 800;
+    }
+    .small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 1px 0px 5px 0.5px rgb(193, 190, 190);
+        font-size: 20px;
+    }
+    
+    .small h4 {
+        animation: animateSmalll 1s steps(38) forwards forwards;
+    }
+
+    @keyframes animateSmalll {
+        0% {
+            content: "1%";
+        }
+        50% {
+            content: "22%";
+        }
+        100% {
+            content: "38%";
+        }
+    }
+
+    .arc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border-top: 2px solid blue;
+        border-left: 2px solid transparent;
+        border-right: 2px solid blue;
+        border-bottom: 2px solid blu;
+        transform: scaleX(-1);
+        animation: moveArc 3s ease-in-out 1 forwards;   
+    }
+
+    .arc::after {
+        content: "";
+        position: absolute;
+        top: 17px;
+        left: 11px;
+        transform: translateX(50%);
+        width: 10px;
+        height: 10px;
+        background-color: blue;
+        border-radius: 50%;
+    }
+
+
+    @keyframes moveArc {
+        0% {
+            transform: rotate(0deg) scaleX(-1);
+        }
+        50% {
+            transform: rotate(180deg) scaleX(-1);
+        }
+        100% {
+            transform: rotate(189deg) scaleX(-1);
+        }
+    }
+</style>
+</head>
+<body>
+
+    
+
+
+    <div class="barchart">
+
+        <div class="stat">
+            <h4>Statistics</h4>
+            <select id="year" >
+                <option value="Year">Year</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+            </select>
+        </div> 
+
+        <ul class="num">
+            <li>5k</li>
+            <li>2k</li>
+            <li>1k</li>
+            <li>0</li>
+        </ul>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line one"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line two"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line three"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line four"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain five1">
+            <div class="line-container">
+                <div class="line five"></div>
+                <div class="thin-line fivee"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line six"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line  seven"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line eight"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line nine"></div>
+                <div class="thin-line ninee"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line ten"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line eleven"></div>
+                <div class="thin-line elevene"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line twelve"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line thirteen"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line fourteen"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line fifteen"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line sixteen"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line seventeen"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line eighteen"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="line-container">
+                <div class="line nineteen"></div>
+                <div class="thin-line"></div>
+            </div>
+        </div>
+
+        <ul class="num2">
+            <li>Nov</li>
+            <li>Dec</li>
+            <li>Jan</li>
+            <li>Feb</li>
+            <li>Mar</li>
+            <li>Apr</li>
+            <li>May</li>
+            <li>Jun</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- top cards -->
+    <div class="cards">
+        <div class="card1">
+            <div class="pic">
+                <img src="Group 5.png" height="40px" width="80px">
+            </div>
+            <div class="txt1">
+                <h5>VISITORS</h5>
+                <h3>10,320</h3>
+            </div>
+        </div>
+    
+        <div class="card1">
+            <div class="pic">
+                <img src="Group 6 (1).png" height="40px" width="80px">
+            </div>
+            <div class="txt">
+                <h5>CUSTOMERS</h5>
+                <h3>4,628</h3>
+            </div>
+        </div>
+
+        
+    
+        <div class="card1 red">
+            <div class="pic">
+                <img src="Group 7.png" height="40px" width="80px">
+            </div>
+            <div class="txt">
+                <h5>ORDERS</h5>
+                <h3>2,980</h3>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- smaller card -->
+    <div class="cont">
+        <div class="cont-pic">
+            <img src="hh.png" alt="">
+            <div class="text">
+                <h4>Lilly Donovan</h4>
+                <p>Business Trainer</p>
+            </div>
+        </div>
+        <h4>How to properly manage your personal budget</h4>
+        <div class="cont-icon">
+            <div class="vid">
+
+                <p>Video</p>
+            </div>
+            <div class="time">
+
+                <p>15 minutes</p>
+            </div>
+            <div class="star">
+
+                <p>12 likes</p>
+            </div>
+        </div>
+        <div class="cont-btn">
+            <p>5 days ago</p>
+            <button>Connect  ></button>
+        </div>
+    </div>
+
+
+
+    <!-- main right -->
+    <div class="toast">
+
+        <div class="container">
+            <div class="circle">
+                <div class="small">
+                    <h4>38%</h4>
+                </div>
+            </div>
+            <div class="arc"></div>
+        </div>
+
+
+        <div class="txt2">
+            <p>My Card</p>
+            <h3>..</h3>
+        </div>
+        <div class="atm">
+
+        </div>
+        <div class="trans">
+            <p>Transaction</p>
+            <h4>+</h4>
+        </div>
+        <div class="details">
+            <div class="item">
+                <img src="" alt="">
+                <div class="txt3">
+                    <h4>Taxi</h4>
+                    <p>01:22PM</p>
+                </div>
+                <h3>-$9,20</h3>
+            </div>
+
+            <div class="item">
+                <img src="" alt="">
+                <div class="txt3">
+                    <h4>Shopping</h4>
+                    <p>11:15AM</p>
+                </div>
+                <h3>-$142.00</h3>
+            </div>
+
+            <div class="item">
+                <img src="" alt="">
+                <div class="txt3">
+                    <h4>Netflix</h4>
+                    <p>Jan 10, 2020.</p>
+                </div>
+                <h3>-$24.99</h3>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <ul class="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+      
+</body>
+</html>
