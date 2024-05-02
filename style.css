@@ -34,6 +34,10 @@ body {
 .nav.active {
     width: 70px;
 }
+
+.nav.active .title {
+    display: none;
+}
 .nav ul {
     position: absolute;
     top: 0;
@@ -133,6 +137,7 @@ body {
 .main.active {
     width: calc(100% - 70px); 
     left: 70px;
+   
 }
 
 .topbar {
@@ -150,11 +155,12 @@ body {
     width: 50px;
     height: 45px;
     background: #ccc;
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 10px;
 }
 
 .search {
@@ -211,21 +217,56 @@ body {
 .cardBox {
     width: 100%;
     padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     color: black;
     position: relative;
+    margin-right: 10px;
+    gap: 40px;
 }
+.main.active .card {
+    width: 17%;
+   
 
+
+}
 .cardBox .card {
     position: relative;
     background-color: white;
-    padding: 30px;
+    padding: 25px;
+    width: 15%;
     border-radius: 20px;
     display: flex;
     cursor: pointer;
     justify-content: space-between;
     box-shadow: 0 7px 25px rgba( 0, 0, 0, 0.08);
+}
+
+.cardBox .card .num {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #2a2185;
+}
+
+.cardBox .card .cardname {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    color: var(--black1);
+}
+
+.cardBox .card .iconbx {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--black1);
+}
+
+.cardBox .card:hover {
+    background-color: #2a2185;
+}
+
+.cardBox .card:hover .num,
+.cardBox .card:hover .iconbx,
+.cardBox .card:hover .cardname {
+    color: white;
 }
 
 
